@@ -50,6 +50,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\XL_CTHD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_BANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_CHAMCONG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_DONHANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_KHACHHANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_LOAISP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_LOAITK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_NHANVIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_NSX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XL_SANPHAM.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

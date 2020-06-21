@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,13 +36,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 51);
+            this.label1.Location = new System.Drawing.Point(46, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 0;
@@ -51,7 +54,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 86);
+            this.label2.Location = new System.Drawing.Point(46, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 0;
@@ -59,22 +62,22 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(321, 51);
+            this.textBox1.Location = new System.Drawing.Point(259, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 22);
+            this.textBox1.Size = new System.Drawing.Size(248, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(321, 88);
+            this.textBox2.Location = new System.Drawing.Point(259, 72);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 22);
+            this.textBox2.Size = new System.Drawing.Size(248, 22);
             this.textBox2.TabIndex = 1;
             // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(192, 142);
+            this.simpleButton1.Location = new System.Drawing.Point(97, 112);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(147, 64);
             this.simpleButton1.TabIndex = 2;
@@ -83,7 +86,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(437, 144);
+            this.simpleButton2.Location = new System.Drawing.Point(342, 114);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(132, 60);
             this.simpleButton2.TabIndex = 2;
@@ -93,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 282);
+            this.ClientSize = new System.Drawing.Size(563, 262);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.textBox2);
@@ -102,6 +105,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +119,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
