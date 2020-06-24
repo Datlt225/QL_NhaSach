@@ -71,12 +71,13 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(259, 72);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(248, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
             this.btnDangNhap.Location = new System.Drawing.Point(97, 112);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(147, 64);
@@ -86,7 +87,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(342, 114);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(132, 60);
@@ -107,7 +108,6 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
-            this.Enter += new System.EventHandler(this.frmDangNhap_Enter);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmDangNhap_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

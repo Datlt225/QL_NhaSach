@@ -42,7 +42,7 @@ namespace QL_NhaSach
                     btnDangXuat.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnNhanVien.Enabled = false;
-                    btnChamCong.Enabled = false
+                    btnChamCong.Enabled = false;
                     btnLoaiSanPham.Enabled = false;
                     btnSanPham.Enabled = false;
                     btnDonHang.Enabled = false;
@@ -98,18 +98,19 @@ namespace QL_NhaSach
 
         private void btnDoiMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             if (fDoiMatKhau == null)
             {
                 fDoiMatKhau = new frmDoiMatKhau();
-                frmDoiMatKhau.MdiParent = this;
-                frmDoiMatKhau.WindowState = FormWindowState.Maximized;
-                frmDoiMatKhau.Show();
+                fDoiMatKhau.MdiParent = this;
+                fDoiMatKhau.WindowState = FormWindowState.Maximized;
+                fDoiMatKhau.Show();
             }
 
             else
             {
-                frmDoiMatKhau.Active();
-                frmDoiMatKhau.Show();
+                fDoiMatKhau.Activate();
+                fDoiMatKhau.Show();
             }
         }
     }

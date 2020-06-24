@@ -11,7 +11,7 @@ namespace QL_NhaSach.Class
     class XL_BANG : DataTable
     {
         #region Fields
-        public static string cnnStr = "Data Source=.;Initial Catalog=QLNHASACH;Integrated Security=True";
+        public static string cnnStr = "Data Source=DESKTOP-A60TDCO\\SQLEXPRESS;Initial Catalog=QLNHASACH;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query; // Cau truy van

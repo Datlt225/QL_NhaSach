@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +76,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.Location = new System.Drawing.Point(139, 156);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(143, 72);
@@ -83,13 +86,17 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
             this.btnCancel.Location = new System.Drawing.Point(335, 156);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 72);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmDoiMatKhau
             // 
@@ -104,6 +111,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDoiMatKhau";
             this.Text = "frmDoiMatKhau";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +125,6 @@
         private System.Windows.Forms.TextBox txtConfirmPass;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

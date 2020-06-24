@@ -52,9 +52,6 @@ namespace QL_NhaSach
             }
         }
 
-        private void frmDangNhap_Enter(object sender, EventArgs e)
-        {
-            btnDangNhap_Click(sender, e);
-        }
+      
     }
 }
