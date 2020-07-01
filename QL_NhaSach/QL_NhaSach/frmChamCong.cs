@@ -23,6 +23,8 @@ namespace QL_NhaSach
 
         private void frmChamCong_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLNHASACHDataSet.CHAMCONG' table. You can move, or remove it, as needed.
+            this.cHAMCONGTableAdapter.Fill(this.qLNHASACHDataSet.CHAMCONG);
             tblNhanVien = new XL_NHANVIEN();
             tblChamCong = new XL_CHAMCONG();
             loadCTChamCong();

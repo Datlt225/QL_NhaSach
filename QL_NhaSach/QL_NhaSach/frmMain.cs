@@ -110,5 +110,24 @@ namespace QL_NhaSach
                 f.Show();
             }
         }
+
+        private void btnChamCong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("tabPageChamCong");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmChamCong f = new frmChamCong();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPageChamCong";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                f.Show();
+            }
+        }
     }
 }

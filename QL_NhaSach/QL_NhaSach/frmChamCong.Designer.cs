@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChamCong));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listNhanVien = new System.Windows.Forms.ListBox();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnThem = new DevExpress.XtraEditors.SimpleButton();
             this.numSoGio = new System.Windows.Forms.NumericUpDown();
@@ -49,12 +50,14 @@
             this.dgvBtnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.qLNHASACHDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLNHASACHDataSet = new QL_NhaSach.QLNHASACHDataSet();
-            this.listNhanVien = new System.Windows.Forms.ListBox();
+            this.cHAMCONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cHAMCONGTableAdapter = new QL_NhaSach.QLNHASACHDataSetTableAdapters.CHAMCONGTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoGio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHASACHDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHASACHDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHAMCONGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,6 +77,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chấm công";
             // 
+            // listNhanVien
+            // 
+            this.listNhanVien.FormattingEnabled = true;
+            this.listNhanVien.ItemHeight = 16;
+            this.listNhanVien.Location = new System.Drawing.Point(513, 107);
+            this.listNhanVien.Name = "listNhanVien";
+            this.listNhanVien.Size = new System.Drawing.Size(262, 100);
+            this.listNhanVien.TabIndex = 5;
+            // 
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
@@ -85,7 +97,7 @@
             // 
             // sbtnThem
             // 
-            this.sbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.sbtnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnThem.ImageOptions.Image")));
             this.sbtnThem.Location = new System.Drawing.Point(105, 181);
             this.sbtnThem.Name = "sbtnThem";
             this.sbtnThem.Size = new System.Drawing.Size(108, 63);
@@ -210,14 +222,14 @@
             this.qLNHASACHDataSet.DataSetName = "QLNHASACHDataSet";
             this.qLNHASACHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // listNhanVien
+            // cHAMCONGBindingSource
             // 
-            this.listNhanVien.FormattingEnabled = true;
-            this.listNhanVien.ItemHeight = 16;
-            this.listNhanVien.Location = new System.Drawing.Point(513, 107);
-            this.listNhanVien.Name = "listNhanVien";
-            this.listNhanVien.Size = new System.Drawing.Size(262, 100);
-            this.listNhanVien.TabIndex = 5;
+            this.cHAMCONGBindingSource.DataMember = "CHAMCONG";
+            this.cHAMCONGBindingSource.DataSource = this.qLNHASACHDataSetBindingSource;
+            // 
+            // cHAMCONGTableAdapter
+            // 
+            this.cHAMCONGTableAdapter.ClearBeforeFill = true;
             // 
             // frmChamCong
             // 
@@ -236,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChamCong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHASACHDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHASACHDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHAMCONGBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +276,7 @@
         private QLNHASACHDataSet qLNHASACHDataSet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listNhanVien;
+        private System.Windows.Forms.BindingSource cHAMCONGBindingSource;
+        private QLNHASACHDataSetTableAdapters.CHAMCONGTableAdapter cHAMCONGTableAdapter;
     }
 }
