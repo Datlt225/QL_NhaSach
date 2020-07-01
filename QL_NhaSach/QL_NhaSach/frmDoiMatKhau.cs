@@ -20,7 +20,9 @@ namespace QL_NhaSach
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

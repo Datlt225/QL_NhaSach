@@ -80,37 +80,34 @@ namespace QL_NhaSach
         private void frmMain_Load(object sender, EventArgs e)
         {
             enableControl(-1);
-            frmDangNhap f = new frmDangNhap();
-            f.MdiParent = this;
+            frmDangNhap f = new frmDangNhap(this);
             f.StartPosition = FormStartPosition.CenterScreen;
-            f.Show();
             f.WindowState = FormWindowState.Normal;
+            f.ShowDialog();
         }
 
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.Close();
-            }
-            frmMain_Load(sender ,e);
+            tabControlMain.TabPages.Clear();
+            frmMain_Load(sender, e);
         }
 
         private void btnDoiMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
-            if (fDoiMatKhau == null)
-            {
-                fDoiMatKhau = new frmDoiMatKhau();
-                fDoiMatKhau.MdiParent = this;
-                fDoiMatKhau.WindowState = FormWindowState.Maximized;
-                fDoiMatKhau.Show();
-            }
-
+            int index = tabControlMain.TabPages.IndexOfKey("tabPageDoiMatKhau");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
             else
             {
-                fDoiMatKhau.Activate();
-                fDoiMatKhau.Show();
+                frmDoiMatKhau f = new frmDoiMatKhau();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "tabPageDoiMatKhau";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                f.Show();
             }
         }
     }

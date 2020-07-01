@@ -17,22 +17,27 @@ namespace QL_NhaSach
         {
             InitializeComponent();
         }
+        frmMain fMain = null;
         XL_NHANVIEN tblNhanVien;
+
+        public frmDangNhap(frmMain pf)
+        {
+            fMain = pf;
+            InitializeComponent();
+        }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             tblNhanVien = new XL_NHANVIEN();
-            var r = tblNhanVien.Select("Username='" + txtUserName.Text + "'and Password='"
+            DataRow[] r = tblNhanVien.Select("Username='" + txtUserName.Text + "'and Password='"
                 + txtPassword.Text + "'");
             if (r.Count() > 0)
             {
-                frmMain f = (frmMain)this.MdiParent;
-                f.Text = "Quan ly Nha Sach - Chao " + r[0]["TenNV"].ToString();
-                f.maNV = r[0]["MaNV"].ToString();f.enableControl((int)r[0]["MaLTK"]);
-
+                fMain.Text = "Quan ly Nha Sach - Chao " + r[0]["TenNV"].ToString();
+                fMain.maNV = r[0]["MaNV"].ToString();
+                fMain.enableControl((int)r[0]["MaLTK"]);
                 this.Close();
             }
-
             else
             {
                 MessageBox.Show("Sai ten tai khoan hoac mat khau");
